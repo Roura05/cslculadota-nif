@@ -6,8 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    <label for="numeros">Escribe los numeros del DNI:</label>
-    <input type="number" name="numeros" id="numeros">
-    <button>Calcular letra DNI</button>
+    <h1>Calculo de la Letra del NIF</h1>
+    <div id="calculo-letra">
+        <label for="nif">Escribe los numeros del DNI:</label>
+        <input type="text" name="nif" id="fif">
+        <button onclick="muestraLetraNIF()">Calcular letra DNI</button>
+    </div>
+    <script>
+        function calcularLetra(){
+            let letra = "TRWAGMYFPDXBNJZSQVHLCKE";
+            let posicion = nif%23;
+            return letra[posicion]
+        }
+        
+        function muestraLetraNIF(){
+            nif = document.getElementById("nif").value;
+            nifConLetra = nif + "-" + muestraLetraNIF(nif);
+            alert(nifConLetra);
+        }
+    </script>
 </body>
 </html>

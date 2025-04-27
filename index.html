@@ -13,7 +13,7 @@
         <button onclick="muestraLetraNIF()">Calcular letra DNI</button>
     </div>
     <script>
-        function calcularLetra(){
+        function calcularLetra(nif){
             let letra = "TRWAGMYFPDXBNJZSQVHLCKE";
             let posicion = nif%23;
             return letra[posicion]
